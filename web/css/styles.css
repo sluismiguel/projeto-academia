@@ -1,0 +1,137 @@
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f39c12; /* Amarelo escuro */
+    color: #333; /* Cor do texto principal */
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 36px;
+    border-bottom: 3px solid #007bff; /* Detalhe azul abaixo do título */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilo do formulário */
+.form-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para os campos */
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #000; /* Cor preta no título */
+    grid-column: span 2; /* Faz com que o título ocupe as duas colunas */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Detalhe azul abaixo do título */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilo dos campos */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #000; /* Cor preta para o texto do label */
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease; /* Transição suave nas bordas */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Cor azul para foco */
+}
+
+input:hover, textarea:hover {
+    border-color: #007bff; /* Azul no hover */
+}
+
+/* Estilo para os campos inválidos e válidos */
+input.invalid, textarea.invalid {
+    border: 2px solid red;
+}
+
+input.valid, textarea.valid {
+    border: 2px solid green;
+}
+
+/* Estilo para o telefone */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.example {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #007bff; /* Detalhe azul no exemplo */
+}
+
+/* Estilo do botão */
+.btn-container {
+    text-align: center;
+    grid-column: span 2; /* Faz o botão ocupar as duas colunas */
+}
+
+button.btn {
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Largura total do botão */
+}
+
+button.btn:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+button.btn:active {
+    background-color: #004085; /* Azul mais escuro quando pressionado */
+}
+
+/* Pequenos detalhes azuis */
+hr {
+    border-top: 1px solid #007bff; /* Linha azul no formulário, se necessário */
+    margin: 20px 0;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #007bff; /* Cor azul para os placeholders */
+}

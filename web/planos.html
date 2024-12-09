@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Plano - Academia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #ffcc00; /* Amarelo mais escuro */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366; /* Azul */
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .form-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Cor branca */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .planos-lista {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plano {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .plano:hover {
+            transform: scale(1.05);
+        }
+
+        .plano h3 {
+            font-size: 1.6rem;
+            color: #003366;
+        }
+
+        .plano p {
+            font-size: 1.2rem;
+            color: #333333;
+        }
+
+        .plano a {
+            text-decoration: none;
+            color: white;
+            background-color: #003366;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .plano a:hover {
+            background-color: #002244;
+        }
+
+        @media (max-width: 768px) {
+            .plano {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Escolha seu Plano</h1>
+    </div>
+
+    <div class="form-container">
+        <h2>Planos Disponíveis</h2>
+        <div class="planos-lista">
+            <div class="plano">
+                <h3>Plano Básico</h3>
+                <p>R$50,00/mês</p>
+                <a href="pagamento.html?plano=basico">Escolher</a>
+            </div>
+
+            <div class="plano">
+                <h3>Plano Premium</h3>
+                <p>R$100,00/mês</p>
+                <a href="pagamento.html?plano=premium">Escolher</a>
+            </div>
+
+            <div class="plano">
+                <h3>Plano VIP</h3>
+                <p>R$150,00/mês</p>
+                <a href="pagamento.html?plano=vip">Escolher</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

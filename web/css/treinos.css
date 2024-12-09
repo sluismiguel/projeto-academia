@@ -1,0 +1,88 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1C40F; /* Fundo amarelo escuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título da página */
+h1 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* Descrição da página */
+p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Cards de Treinos */
+.treino-card {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.treino-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.treino-card h2 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-top: 15px;
+}
+
+.treino-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botão Voltar */
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn-view {
+    background-color: #007BFF; /* Azul */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}

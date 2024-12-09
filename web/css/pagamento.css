@@ -1,0 +1,90 @@
+/* Estilos gerais para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1C40F; /* Fundo amarelo escuro, igual às outras páginas */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner central para centralizar o conteúdo */
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Usa toda a altura da tela */
+    padding: 20px;
+}
+
+/* Estilo do formulário de pagamento */
+.payment-form {
+    background-color: #FFF; /* Fundo branco para o formulário */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 500px; /* Largura máxima do formulário */
+}
+
+/* Título do formulário */
+h1 {
+    text-align: center; /* Alinha o texto no centro */
+    color: #333; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo das opções de pagamento */
+.payment-methods {
+    margin-bottom: 20px; /* Espaçamento abaixo das opções */
+}
+
+.payment-option {
+    margin-bottom: 15px; /* Espaçamento entre as opções */
+    display: flex; /* Alinha o ícone e o texto em linha */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.payment-option input {
+    margin-right: 10px; /* Espaçamento à direita do input */
+    accent-color: #007BFF; /* Cor personalizada para o radio */
+}
+
+.payment-option label {
+    font-size: 18px; /* Tamanho da fonte do rótulo */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo da área do QR Code */
+.qr-code {
+    text-align: center; /* Centraliza o conteúdo do QR Code */
+    margin-top: 20px; /* Espaçamento acima da área do QR Code */
+    border: 1px dashed #007BFF; /* Borda pontilhada azul */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.qr-code h2 {
+    color: #333; /* Cor do texto */
+}
+
+/* Botão de Finalizar Compra */
+.btn-primary {
+    width: 100%; /* O botão ocupa toda a largura disponível */
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    padding: 12px; /* Padding para o botão */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    transition: background-color 0.3s ease; /* Efeito de transição para a cor do fundo */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor do fundo do botão ao passar o mouse */
+}
+
+/* Ações do formulário (centraliza o botão) */
+.form-actions {
+    text-align: center; /* Centraliza o botão */
+}

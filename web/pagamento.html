@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="css/pagamento.css"> <!-- Novo arquivo CSS específico -->
+</head>
+<body>
+    <div class="container">
+        <div class="payment-form">
+            <h1>Escolha sua Forma de Pagamento</h1>
+            <form id="formPagamento">
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="cartao" name="paymentMethod" value="cartao" required>
+                        <label for="cartao">Cartão de Crédito</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="boleto" name="paymentMethod" value="boleto">
+                        <label for="boleto">Boleto Bancário</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="pix" name="paymentMethod" value="pix">
+                        <label for="pix">PIX</label>
+                    </div>
+                </div>
+
+                <div id="qrCodeContainer" class="qr-code" style="display: none;">
+                    <h2>QR Code PIX</h2>
+                    <img src="imagens/qrcode.png" alt="QR Code" width="200">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Finalizar Compra</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar QR Code se a opção de PIX for escolhida
+        const form = document.getElementById('formPagamento');
+        const qrCodeContainer = document.getElementById('qrCodeContainer');
+        const radioButtons = document.querySelectorAll('input[name="paymentMethod"]');
+
+        radioButtons.forEach(button => {
+            button.addEventListener('change', () => {
+                if (document.querySelector('input[name="paymentMethod"]:checked').value === "pix") {
+                    qrCodeContainer.style.display = "block"; // Exibe o QR Code
+                } else {
+                    qrCodeContainer.style.display = "none"; // Esconde o QR Code
+                }
+            });
+        });
+
+        // Redirecionar para a página de planos após o pagamento
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio do formulário
+            const selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+            if (selectedPaymentMethod) {
+                // Aqui você pode simular o pagamento ou fazer uma lógica de backend
+                alert("Pagamento realizado com sucesso! Redirecionando...");
+
+                // Redirecionar para outra página após finalizar a compra
+                window.location.href = "equipamentos.html";  // Você pode alterar a página conforme necessário
+            } else {
+                alert("Por favor, escolha uma forma de pagamento.");
+            }
+        });
+    </script>
+</body>
+</html>
